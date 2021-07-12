@@ -30,7 +30,7 @@ dogs = soup.find(id="BodyContent_DogList1_dvMainGrid").section.contents[5].find_
 
 # Loop through Dogs
 new_dogs_list = []
-for dog in dogs:
+for dog in reversed(dogs):
 	# Get Dog Information
 	name = dog.find("h3").text.strip()
 	breed = dog.find("span").text.strip()
